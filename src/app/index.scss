@@ -1,0 +1,37 @@
+:root {
+  --red-color: rgb(244, 67, 54);
+  --white-color: #ffffff;
+  --gray-200-color: #c7c7c7;
+  --gray-400-color: #959595;
+  --gray-700-color: #4b4b4b;
+  --green-300-color: rgba(24, 198, 131);
+  --green-400-color: rgb(18, 142, 94);
+  --green-500-color: rgb(12, 99, 66);
+
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
