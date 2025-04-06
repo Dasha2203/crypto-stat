@@ -6,27 +6,28 @@ export const Button = ({
   color = "primary",
   variant = "contained",
   children,
+  className,
   ...props
 }: ButtonProps) => {
-  const className = clsx(
+  const commonClassName = clsx(
     styles["button"],
     styles[`button_${color}`],
     styles[`button_${variant}`],
-    props.className,
+    className,
   );
 
   if ("href" in props) {
     const { href, target, ...restProps } = props;
 
     return (
-      <a className={className} href={href} target={target} {...restProps}>
+      <a className={commonClassName} href={href} target={target} {...restProps}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={className} {...props}>
+    <button className={commonClassName} {...props}>
       {children}
     </button>
   );
