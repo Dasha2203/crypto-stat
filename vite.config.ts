@@ -8,6 +8,7 @@ export default defineConfig({
     alias: {
       "@shared": "/src/shared",
       "@styles": "/src/shared/styles",
+      "@icons": "/src/shared/assets/icons",
     },
   },
 });

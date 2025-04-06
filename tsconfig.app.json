@@ -24,7 +24,8 @@
     "baseUrl": "./",
     "paths": {
       "@shared/*": ["src/shared/*"],
-      "@styles/*": ["src/shared/styles*"]
+      "@styles/*": ["src/shared/styles*"],
+      "@icons": ["src/shared/assets/icons"]
     }
   },
   "include": ["src"]
