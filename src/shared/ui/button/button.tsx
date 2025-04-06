@@ -4,12 +4,14 @@ import styles from "./styles.module.scss";
 
 export const Button = ({
   color = "primary",
+  variant = "contained",
   children,
   ...props
 }: ButtonProps) => {
   const className = clsx(
     styles["button"],
     styles[`button_${color}`],
+    styles[`button_${variant}`],
     props.className,
   );
 

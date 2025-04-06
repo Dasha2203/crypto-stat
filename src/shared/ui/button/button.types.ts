@@ -1,9 +1,11 @@
 import { HTMLAttributes } from "react";
 
 type ButtonColor = "primary";
+type ButtonVariant = "contained" | "outlined";
 
 type ButtonCommonProps = {
   color?: ButtonColor;
+  variant?: ButtonVariant;
 };
 
 type BtnProps = ButtonCommonProps &
