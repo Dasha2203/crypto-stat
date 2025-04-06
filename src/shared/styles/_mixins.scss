@@ -1,0 +1,9 @@
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}

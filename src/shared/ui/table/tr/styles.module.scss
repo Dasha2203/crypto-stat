@@ -1,0 +1,9 @@
+.tr {
+  :global(.td) {
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+  }
+
+  &:hover :global(.td) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
