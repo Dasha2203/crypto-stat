@@ -27,8 +27,10 @@
       "@styles/*": ["src/shared/styles*"],
       "@icons": ["src/shared/assets/icons"],
       "@pages": ["src/pages"],
-      "@components": ["src/shared/components"]
-    }
+      "@components": ["src/shared/components"],
+      "@modules": ["src/modules"]
+    },
+    "types": ["node"]
   },
   "include": ["src"]
 }
