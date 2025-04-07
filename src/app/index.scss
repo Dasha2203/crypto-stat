@@ -1,9 +1,11 @@
 :root {
   --red-color: rgb(244, 67, 54);
   --white-color: #ffffff;
+  --gray-100-color: #eceff1;
   --gray-200-color: #c7c7c7;
   --gray-400-color: #959595;
   --gray-700-color: #4b4b4b;
+  --gray-900-color: #191919;
   --green-300-color: rgba(24, 198, 131);
   --green-400-color: rgb(18, 142, 94);
   --green-500-color: rgb(12, 99, 66);
@@ -13,6 +15,7 @@
 
 body {
   font-family: Roboto, sans-serif;
+  background-color: var(--gray-100-color);
 }
 
 * {
