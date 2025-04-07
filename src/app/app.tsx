@@ -1,5 +1,10 @@
+import { Routing } from "./routes";
 import "./index.scss";
 
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Routing />
+    </>
+  );
 };
