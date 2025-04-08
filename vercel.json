@@ -1,0 +1,4 @@
+{
+  "source": "/api/(.*)",
+  "destination": "https://rest.coincap.io/v3/$1"
+}
