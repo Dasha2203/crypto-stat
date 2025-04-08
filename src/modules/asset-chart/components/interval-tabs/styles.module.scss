@@ -1,0 +1,10 @@
+.tabs {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+
+  .button {
+    flex-shrink: 0;
+  }
+}
