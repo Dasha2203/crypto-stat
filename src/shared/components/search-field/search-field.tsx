@@ -4,7 +4,7 @@ import { Button, TextField } from "@shared/ui";
 import { SearchFieldProps, SearchFormData } from "./search-field.types";
 import styles from "./styles.module.scss";
 
-const SearchField = ({ placeHolder }: SearchFieldProps) => {
+export const SearchField = ({ placeHolder }: SearchFieldProps) => {
   const { updateSearchParams } = useUpdateSearchParams();
   const { control, handleSubmit } = useForm<SearchFormData>({
     defaultValues: {
@@ -13,7 +13,7 @@ const SearchField = ({ placeHolder }: SearchFieldProps) => {
   });
 
   const onSubmit = ({ search }: SearchFormData) => {
-    updateSearchParams("query", search);
+    updateSearchParams("search", search);
   };
 
   return (
@@ -42,5 +42,3 @@ const SearchField = ({ placeHolder }: SearchFieldProps) => {
     </form>
   );
 };
-
-export default SearchField;
