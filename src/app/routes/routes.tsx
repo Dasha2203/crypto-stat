@@ -1,5 +1,5 @@
 import { PATHS } from "@shared/routes";
-import { HomePage } from "@pages";
+import { HomePage, AssetPage } from "@pages";
 import { Layout } from "@components";
 import { Route } from "./routes.types";
 
@@ -17,11 +17,11 @@ export const ROUTES: Route[] = [
         children: [
           {
             index: true,
-            element: <div>assets</div>,
+            element: <HomePage />,
           },
           {
             path: PATHS.assets.children?.asset.path,
-            element: <div>asset</div>,
+            element: <AssetPage />,
           },
         ],
       },
