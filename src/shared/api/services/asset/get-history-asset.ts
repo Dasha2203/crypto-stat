@@ -1,9 +1,22 @@
-import { api, ResponseHistoryAsset } from "@shared/api";
+import { api, HistoryInterval, ResponseHistoryAsset } from "@shared/api";
 
-export const getHistoryAsset = async (
-  id: string,
-): Promise<ResponseHistoryAsset> => {
-  const { data } = await api.get<ResponseHistoryAsset>(`/assets/${id}/history`);
+type Properties = {
+  id: string;
+  interval?: HistoryInterval;
+};
+
+export const getHistoryAsset = async ({
+  id,
+  interval = "m1",
+}: Properties): Promise<ResponseHistoryAsset> => {
+  const { data } = await api.get<ResponseHistoryAsset>(
+    `/assets/${id}/history`,
+    {
+      params: {
+        interval,
+      },
+    },
+  );
 
   return data;
 };
