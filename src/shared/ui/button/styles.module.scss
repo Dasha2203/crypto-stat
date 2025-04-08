@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@use "@styles/mixins" as *;
 
 .button {
   padding: 11px 21px;
