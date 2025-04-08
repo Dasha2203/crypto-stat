@@ -28,6 +28,7 @@
       "@icons": ["src/shared/assets/icons"],
       "@pages": ["src/pages"],
       "@components": ["src/shared/components"],
+      "@modules/*": ["src/modules/*"],
       "@modules": ["src/modules"]
     },
     "types": ["node"]
