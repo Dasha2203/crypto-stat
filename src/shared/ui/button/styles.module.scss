@@ -1,0 +1,63 @@
+@use "@styles/mixins" as *;
+
+.button {
+  padding: 11px 21px;
+  display: inline-flex;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  transition: background-color var(--transition);
+  @include no-tap-highlight;
+  @include text-ellipsis;
+
+  &:disabled {
+    cursor: default;
+    background-color: var(--gray-200-color);
+
+    &:hover {
+      background-color: var(--gray-200-color);
+    }
+  }
+
+  &.button_outlined {
+    border-width: 1px;
+    border-style: solid;
+    background-color: var(--white-color);
+
+    &:disabled {
+      border-color: var(--gray-200-color);
+      background-color: var(--white-color);
+      color: var(--gray-200-color);
+    }
+  }
+
+  &_primary {
+    background-color: var(--green-300-color);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--green-400-color);
+    }
+
+    &:active {
+      background-color: var(--green-500-color);
+    }
+
+    &.button_outlined {
+      border: 1px solid var(--green-300-color);
+      color: var(--green-300-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--green-300-color);
+        color: var(--white-color);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+}

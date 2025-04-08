@@ -1,0 +1,40 @@
+:root {
+  --red-color: rgb(244, 67, 54);
+  --white-color: #ffffff;
+  --gray-100-color: #eceff1;
+  --gray-200-color: #c7c7c7;
+  --gray-400-color: #959595;
+  --gray-700-color: #4b4b4b;
+  --gray-900-color: #191919;
+  --green-300-color: #18c683;
+  --green-400-color: #128e5e;
+  --green-500-color: #0c6342;
+
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--gray-100-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

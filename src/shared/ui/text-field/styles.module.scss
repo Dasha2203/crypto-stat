@@ -1,0 +1,64 @@
+@use "@styles/mixins" as *;
+
+.text-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+  &__label {
+    margin-bottom: 8px;
+    color: var(--gray-700-color);
+  }
+
+  &__helper {
+    margin-top: 4px;
+    color: var(--gray-400-color);
+  }
+
+  &__helper,
+  &__label {
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__input {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: border-color var(--transition);
+    border-radius: 5px;
+    border: 1px solid var(--gray-700-color);
+    @include text-ellipsis;
+  }
+
+  &_primary {
+    .text-field__input {
+      &:not(:disabled):hover {
+        border-color: var(--green-400-color);
+      }
+      &:focus {
+        border-color: var(--green-400-color);
+      }
+    }
+  }
+
+  &.error {
+    .text-field {
+      &__label,
+      &__helper {
+        color: var(--red-color);
+      }
+      &__input {
+        color: var(--red-color);
+        border-color: var(--red-color);
+
+        &:hover {
+          border-color: var(--red-color);
+        }
+      }
+    }
+  }
+}

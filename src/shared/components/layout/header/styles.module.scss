@@ -1,0 +1,24 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding-block: 20px;
+  background-color: var(--white-color);
+  z-index: 1000;
+
+  &__container {
+    margin: 0 auto;
+    padding-inline: 15px;
+    max-width: 1200px;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--gray-900-color);
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--gray-700-color);
+    }
+  }
+}

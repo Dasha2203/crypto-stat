@@ -1,3 +1,11 @@
+import { Routing } from "./routes";
+import { QueryProvider } from "./query";
+import "./index.scss";
+
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <QueryProvider>
+      <Routing />
+    </QueryProvider>
+  );
 };

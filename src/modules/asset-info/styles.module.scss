@@ -1,0 +1,34 @@
+@use "@styles/mixins" as *;
+
+.loader {
+  margin: 0 auto;
+}
+
+.asset-info {
+  .title {
+    font-size: 36px;
+    @include text-ellipsis;
+
+    span {
+      margin-left: 15px;
+      display: inline-flex;
+      flex-shrink: 0;
+      color: var(--gray-700-color);
+      font-size: 18px;
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-700-color);
+
+    span {
+      color: var(--gray-900-color);
+    }
+  }
+}
