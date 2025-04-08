@@ -1,1 +1,1 @@
-export * from "./assets-list";
+export * from "./infinite-assets-list";

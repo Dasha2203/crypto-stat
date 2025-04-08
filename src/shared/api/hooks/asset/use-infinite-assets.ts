@@ -14,7 +14,7 @@ export const useInfiniteAssets = () => {
       getAssets({ offset: pageParam as number, limit: LIMIT, search }),
     getNextPageParam: (lastPage, pages) => {
       if (lastPage.data.length < LIMIT) {
-        return false;
+        return undefined;
       }
       return pages.length * LIMIT;
     },

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { NoResult } from "@components";
 import { Table, TBody, Th, THead, Tr, Loader } from "@shared/ui";
 import { sortByKey } from "@shared/utils";
@@ -39,6 +40,7 @@ export const AssetsList = () => {
     isLoading,
     error,
   } = useInfiniteAssets();
+  const navigate = useNavigate();
   const [assets, setAssets] = useState<Asset[]>([]);
   const [sortKey, setSortKey] = useState<keyof Asset | null>(null);
   const [sortDirection, setSortDirection] = useState<SortOrder>(SortOrder.ASC);
@@ -97,7 +99,11 @@ export const AssetsList = () => {
           </THead>
           <TBody>
             {assets.map((asset) => (
-              <Row key={asset.id} asset={asset} />
+              <Row
+                key={asset.id}
+                asset={asset}
+                onClick={() => navigate(`/assets/${asset.id}`)}
+              />
             ))}
           </TBody>
         </Table>
