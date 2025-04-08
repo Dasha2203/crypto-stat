@@ -10,6 +10,7 @@ type ButtonCommonProps = {
 
 type BtnProps = ButtonCommonProps &
   HTMLAttributes<HTMLButtonElement> & {
+    type?: "button" | "submit" | "reset";
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     disabled?: boolean;
   };
