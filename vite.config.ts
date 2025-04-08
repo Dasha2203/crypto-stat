@@ -16,17 +16,14 @@ export default defineConfig(({ mode }) => {
         "@modules": "/src/modules",
       },
     },
-    server:
-      mode === "development"
-        ? {
-            proxy: {
-              "/api": {
-                target: env.VITE_BASE_URL,
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, ""),
-              },
-            },
-          }
-        : undefined,
+    server: {
+      proxy: {
+        "/api": {
+          target: env.VITE_BASE_URL,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""),
+        },
+      },
+    },
   };
 });
