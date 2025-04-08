@@ -1,4 +1,6 @@
 .table {
+  table-layout: auto;
   width: 100%;
   border: 1px solid rgba(34, 36, 38, 0.1);
+  background-color: var(--white-color);
 }

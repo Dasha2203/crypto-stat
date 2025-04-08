@@ -6,11 +6,11 @@
   background-color: rgba(250, 250, 250);
   transition: color var(--transition);
   user-select: none;
+  font-size: 12px;
   @include no-tap-highlight;
   @include text-ellipsis;
 
-  &:global(.asc),
-  &:global(.desc) {
+  &.hover {
     &:hover {
       color: rgba(0, 0, 0, 0.9);
     }
@@ -23,11 +23,7 @@
     align-items: center;
   }
 
-  &:global(.asc) {
-    transform: rotate(0);
-  }
-
-  &:global(.desc) .icon {
+  &:global(.asc) .icon {
     transform: rotate(180deg);
   }
 
